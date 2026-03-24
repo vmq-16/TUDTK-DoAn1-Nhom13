@@ -1,0 +1,32 @@
+# 1. Môi trường ảo và Biến môi trường
+venv/
+env/
+.env
+
+# 2. File rác Python và Jupyter Notebook
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# 3. Manim
+media/
+ManimCE_ext/
+
+# 4. Latex
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.xdv
+
+# Cấu hình cá nhân của Editor và Hệ điều hành
+.vscode/
+.DS_Store
+Thumbs.db
