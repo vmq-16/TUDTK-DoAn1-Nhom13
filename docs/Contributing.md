@@ -15,7 +15,7 @@ Tất cả thành viên cần cài đặt đủ 3 công cụ sau trước khi cl
 | Phần mềm | Ghi chú quan trọng |
 |----------|---------|
 | **1. Git** | Tải từ [git-scm.com](https://git-scm.com/downloads). Cài đặt xong thì đăng nhập Github. |
-| **2. Python 3.10 trở lên** | Tải từ [python.org](https://www.python.org/downloads/). ⚠️ **BẮT BUỘC TICK VÀO Ô `Add python.exe to PATH`** ở màn hình cài đặt đầu tiên.
+| **2. Python 3.10 trở lên (khuyến khích 3.14.3)** | Tải từ [python.org](https://www.python.org/downloads/). ⚠️ **BẮT BUỘC TICK VÀO Ô `Add python.exe to PATH`** ở màn hình cài đặt đầu tiên.
 | **3. VS Code** | Trình soạn thảo chính. Vào mục Extensions (Ctrl+Shift+X) cài thêm 2 tiện ích: **Python** và **Jupyter** (của Microsoft). |
 
 ## 2. THIẾT LẬP BAN ĐẦU
