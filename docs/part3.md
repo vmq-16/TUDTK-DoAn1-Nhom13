@@ -6,7 +6,7 @@
 
 * ✅ **Tái sử dụng code:** Gọi lại các hàm giải hệ phương trình bằng phép khử Gauss (từ `part1/`) và Phân rã ma trận (từ `part2/`) để làm đối tượng so sánh.
 * ✅ **Phương pháp lặp:** Bắt buộc cài đặt ít nhất một phương pháp lặp, khuyến khích dùng **Gauss-Seidel**.
-* ✅ **Thư viện:** Dùng `time` hoặc `timeit` để đo thời gian, dùng `matplotlib` để vẽ biểu đồ, dùng `numpy` để sinh ma trận ngẫu nhiên và tính chuẩn (norm) sai số.
+* ✅ **Thư viện:** Dùng `time` hoặc `timeit` để đo thời gian, dùng `matplotlib` để vẽ biểu đồ, dùng `numpy` để sinh ma trận ngẫu nhiên và tính chuẩn sai số.
 
 ## 2. CHI TIẾT YÊU CẦU CÁC FILE MÃ NGUỒN
 
@@ -17,7 +17,7 @@ Các file Python chứa logic thuật toán và hàm hỗ trợ được đặt 
   * Cài đặt phương pháp lặp Gauss-Seidel dựa trên công thức lặp theo từng thành phần:
     $$x_{i}^{(k+1)}=\frac{1}{a_{ii}}(b_{i}-\sum_{j=1}^{i-1}a_{ij}x_{j}^{(k+1)}-\sum_{j=i+1}^{n}a_{ij}x_{j}^{(k)})$$
   * **Kiểm tra điều kiện hội tụ:** Ma trận $A$ phải là ma trận chéo trội chặt hàng ($|a_{ii}|>\sum_{j\ne i}|a_{ij}|$). Nếu không thỏa mãn, cần in ra cảnh báo trước khi lặp.
-  * Dừng lặp khi đạt số lần tối đa (`max_iter`) hoặc khi độ lệch giữa hai nghiệm liên tiếp nhỏ hơn ngưỡng sai số (`tol`).
+  * Dừng lặp khi đạt số lần tối đa `max_iter` hoặc khi độ lệch giữa hai nghiệm liên tiếp nhỏ hơn ngưỡng sai số `tol`.
 
 ### 2.2. `benchmark.py` (Công cụ sinh dữ liệu và đo lường)
 * Cài đặt các hàm hỗ trợ sinh ma trận cho quá trình test:

@@ -9,14 +9,14 @@
 ## 2. CHI TIẾT YÊU CẦU CÁC FILE CODE THUẬT TOÁN
 
 ### 2.1. `decomposition.py` (Thuật toán phân rã)
-* Cài đặt thuật toán phân rã nhóm đã chọn từ đầu (from scratch).
+* Cài đặt thuật toán phân rã nhóm đã chọn từ đầu.
 * Tùy thuộc vào thuật toán chọn mà input/output sẽ khác nhau. Ví dụ nếu chọn SVD, hàm cần trả về 3 ma trận $U$, $\Sigma$, $V^{T}$.
 * Cần viết kèm hàm đối chiếu sai số với kết quả của NumPy/SciPy (dùng `numpy.allclose` với `atol=1e-9` như Phần 1).
 
 ### 2.2. `diagonalization.py` (Chéo hóa ma trận)
 * **Mục tiêu:** Phân tích ma trận thành dạng $A=P D P^{-1}$.
-* Cài đặt thuật toán tìm các giá trị riêng (eigenvalues) $\lambda_{i}$ để tạo ma trận đường chéo $D$.
-* Cài đặt thuật toán tìm các vector riêng (eigenvectors) độc lập tuyến tính để tạo ma trận $P$.
+* Cài đặt thuật toán tìm các giá trị riêng $\lambda_{i}$ để tạo ma trận đường chéo $D$.
+* Cài đặt thuật toán tìm các vector riêng độc lập tuyến tính để tạo ma trận $P$.
 
 ## 3. YÊU CẦU TRỰC QUAN HÓA MANIM (BẮT BUỘC)
 
