@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ```
 
 > ⚠️ **ĐẶC BIỆT LƯU Ý CHO PHẦN 2 (MANIM):**
-> Thư viện `manim` cần bộ giải mã video của Windows. Khuyến khích sử dụng Manim Community phiên bản stable v.20.1. Những ai muốn chạy code manim thi phải đảm bảo đã cài FFmpeg + MiKTeX + Ghostscript.
+> Thư viện `manim` cần bộ giải mã video của Windows. Khuyến khích sử dụng Manim Community phiên bản stable v.20.1. Những ai muốn chạy code manim thi phải đảm bảo đã cài **FFmpeg + MiKTeX + Ghostscript**. (mình cũng không ngờ phải cài nhiều đến vậy, có gì góp ý cho mình :v)
 
 ## 3. CẤU TRÚC THƯ MỤC & QUY TẮC FILE
 
