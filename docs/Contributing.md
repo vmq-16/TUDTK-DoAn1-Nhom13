@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ```
 
 > ⚠️ **ĐẶC BIỆT LƯU Ý CHO PHẦN 2 (MANIM):**
-> Thư viện `manim` cần bộ giải mã video của Windows. Khuyến khích sử dụng Manim Community phiên bản stable v.20.1. **Chỉ những ai code Phần 2** mới cần mở `Windows PowerShell` lên và chạy lệnh: `winget install Gyan.FFmpeg`, sau đó khởi động lại môi trường lập trình để tiếp tục làm.
+> Thư viện `manim` cần bộ giải mã video của Windows. Khuyến khích sử dụng Manim Community phiên bản stable v.20.1. Những ai muốn chạy code manim thi phải đảm bảo đã cài FFmpeg + MiKTeX + Ghostscript.
 
 ## 3. CẤU TRÚC THƯ MỤC & QUY TẮC FILE
 
