@@ -63,6 +63,7 @@ TUDTK-DoAn1-Nhom13/
 |   |-- determinant.py         ← Code tính định thức
 |   |-- inverse.py             ← Code tìm ma trận nghịch đảo
 |   |-- rank_basis.py          ← Code tìm hạng và cơ sở
+|   |-- verify.py              ← Code kiểm chứng kết quả
 |   `-- part1_demo.ipynb       ← File Jupyter Notebook chạy thử Phần 1
 |-- part2/                     
 |   |-- decomposition.py       ← Code thuật toán phân rã ma trận
