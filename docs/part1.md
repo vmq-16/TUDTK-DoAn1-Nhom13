@@ -67,6 +67,6 @@ Do máy tính lưu trữ số thực luôn tiềm ẩn sai số (ví dụ $0.1+0
 
 * Khi so sánh một số thực $x$ với $0$, kiểm tra điều kiện $|x|<\epsilon$ thay vì $x==0$.
 * Khi giá trị cực nhỏ (nhỏ hơn $\epsilon$), chủ động gán thẳng giá trị đó về $0.0$ để làm sạch ma trận, tránh rác dữ liệu ở các bước tính toán tiếp theo.
-* Để kiểm tra $x==0$, có thề xài `math.isclose(x, 0)`.
+* Để kiểm tra $x==0$, có thề xài `math.isclose(x, 0, abs_tol=1e-9)`.
 
 P/s: có thể dùng `numpy.allclose` với `atol=1e-9` để so sánh 2 số/mảng/ma trận/mảng n chiều.
