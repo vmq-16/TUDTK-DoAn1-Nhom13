@@ -1,4 +1,5 @@
 epsilon = 1e-9 
+warning_epsilon = 1e-6
 
 # Take in an array A and array b and perform REF on A|b
 #
@@ -46,7 +47,11 @@ def gaussian_elimination(A, b):
                 pivot = (row, k)
 
         if abs(M[pivot[0]][pivot[1]]) < epsilon:
+            M[pivot[0]][pivot[1]] = 0
             continue
+
+        if abs(M[pivot[0]][pivot[1]]) > epsilon and abs(M[pivot[0]][pivot[1]]) < warning_epsilon:
+            print(f"[WARN]: pivot at {(pivot[0], pivot[1])} is close to 0. System may be ill-conditioned")
 
         #Row swap
         if pivot[0] != cur_row:
