@@ -12,72 +12,118 @@ def gaussian_elimination(A, b):
         if len(row) != len(A[0]):
             raise ValueError("All row must have the same length")
 
-    if len(A) != len(A[0]):
-        raise ValueError("Matrix A must be a square matrix")
-
-
     #Normalize
     A = [[float(x) for x in row] for row in A] 
     b = [float(x) for x in b] 
 
-    print(f"Matrix A: {A}")
-    print(f"Matrix b: {b}")
-
     #Join matrix M(A | b)
     M = [A[i] + [b[i]] for i in range(len(A))]
 
-    print(f"Matrix M: {M}")
-
     nrows = len(M)
+    ncols = len(M[0])
     swap_count = 0
 
-    for k in range(nrows):
-        pivot = k
-        for row in range (k+1, nrows):
-            #Find a row at col k where the value is highest
-            if abs(M[row][k]) > abs(M[pivot][k]):
-                pivot = row
+    print(f"M: {M}")
+    cur_row = 0
+    
+    for k in range(ncols-1):
+        if cur_row >= nrows:
+            break
 
-        #Case where choosen pivot = 0
-        if abs(M[pivot][k]) < epsilon:
-            raise ValueError(f"Pivot does not exist at column {k}")
-        
-        #Swap row
-        if pivot != k:
-            M[k], M[pivot] = M[pivot], M[k]
+        pivot = (cur_row, k)
+        #Finding the row with the largest number within the same col
+        for row in range(cur_row + 1, nrows):
+            # print(f"Checking {row, k}, value: {M[row][k]} compare with pivot at {pivot} with value {M[pivot[0]][pivot[1]]}")
+            if abs(M[row][k]) > abs(M[pivot[0]][pivot[1]]):
+                pivot = (row, k)
+
+        # print(f"Max value is {M[pivot[0]][pivot[1]]} at point {pivot}")
+
+        if abs(M[pivot[0]][pivot[1]]) < epsilon:
+            # print(f"Pivot does not exist at {(cur_row, k)}")
+            continue
+
+        if pivot[0] != cur_row:
+            # print(f"Swapping row {pivot[0]} with row {cur_row}")
+            M[cur_row], M[pivot[0]] = M[pivot[0]], M[cur_row]
             swap_count += 1
 
-        #Start to perform elimination
-        for row in range (k+1, nrows):
-            factor = M[row][k] / M[k][k]
+        # print(f"at k = {k}, before elim M = {M}")
 
-            for col in range (k, nrows + 1): #n + 1 to span over to the b column too
-                M[row][col] -= factor * M[k][col]
+        for row in range(cur_row + 1, nrows):
+            factor = M[row][k] / M[cur_row][k]
+
+            for col in range(k, ncols):
+                M[row][col] -= factor * M[cur_row][col]
                 if abs(M[row][col]) < epsilon:
-                    M[row][col] = 0.0
+                    M[row][col] = 0
+        
 
-        print(f"M after {k}: {M}")
+        # print(f"at k = {k} after elim, M = {M}")
+        cur_row += 1
 
     U = [row[:-1] for row in M]
     c = [row[-1] for row in M]
 
-    print(f"Matrix M after REF: {M}")
+    print(f"U: {U}")
+    print(f"c: {c}")
 
-    return U, c, swap_count
+    for row in range(nrows):
+        if all(abs(M[row][col]) < epsilon for col in range(ncols - 1)) and abs(M[row][ncols-1]) >= epsilon:
+            raise ValueError("No solution")
+
+    x = back_substitution(U, c)
+    return U, x, swap_count
 
 def back_substitution(U, c):
-    n = len(U)
-    x = [0.0] * n
+    nrows = len(U)
+    ncols = len(U[0])
+    pivot_cols = []
 
-    for row in range(n-1, -1, -1):
-        s = 0.0
-        
-        for col in range(row+1, n):
-            s += U[row][col] * x[col]
-        
-        x[row] = (c[row] - s) / U[row][col]
+    cur_row = 0 
+    for k in range(ncols):
+        if cur_row >= nrows:
+            break
+       
+        if abs(U[cur_row][k]) < epsilon:
+           continue
+       
+        pivot_cols.append((cur_row, k))
+        cur_row += 1
 
-    return x
+    print(pivot_cols)
 
+    pivot_only_cols = [c for (r,c) in pivot_cols]
+    free_vars = [col for col in range(ncols) if col not in pivot_only_cols]
 
+    print(free_vars)
+    sol = [None]*ncols
 
+    if free_vars:
+        # assign free vars
+        for i, col in enumerate(free_vars):
+            sol[col] = f"t{i+1}"
+
+    # back-substitution bottom-up
+    for row, col in reversed(pivot_cols):
+        print(f"{row, col}")
+        expr = f"{c[row]}"
+
+        for j in range(ncols - 1, col, -1):
+            print(f"j = {j}")
+            if sol[j] is not None:
+                if "t" not in str(sol[j]):
+                    print(sol[j])
+                    expr += f" - {U[row][j] * float(eval(sol[j]))}"
+                else:    
+                    expr += f" - ({U[row][j]})*({sol[j]})"
+
+        if abs(U[row][col] - 1) > epsilon:
+            expr = f"({expr}) / {U[row][col]}"
+            if "t" not in expr:
+                expr = str(float(eval(expr)))
+
+        print(f"at pivot {row, col}, the exp is {expr}")
+        sol[col] = expr
+
+    return sol
