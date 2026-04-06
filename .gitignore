@@ -9,7 +9,6 @@ __pycache__/
 *.pyo
 *.pyd
 .ipynb_checkpoints/
-main.py
 
 # 3. Manim
 media/
