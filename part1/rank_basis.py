@@ -15,8 +15,7 @@ def clean_value(x):
 
 def to_rref(A):
     """
-    Đưa ma trận A về Dạng bậc thang dòng rút gọn (RREF).
-    Được nâng cấp để xử lý triệt để sai số chấm động.
+    Đưa ma trận A về Dạng bậc thang dòng rút gọn
     """
     # Khởi tạo bản sao và làm sạch dữ liệu đầu vào
     mat = [[clean_value(val) for val in row] for row in A]
@@ -38,7 +37,7 @@ def to_rref(A):
                 max_val = abs(mat[i][c])
                 pivot_row = i
                 
-        # Kiểm tra Pivot == 0 bằng cấu trúc thống nhất của nhóm
+        # Kiểm tra Pivot == 0 
         if math.isclose(max_val, 0, abs_tol=EPSILON):
             for i in range(r, m):
                 mat[i][c] = 0.0 # Ép về 0.0 để tránh rác dữ liệu
@@ -59,7 +58,7 @@ def to_rref(A):
                 factor = mat[i][c]
                 for j in range(c, n):
                     mat[i][j] -= factor * mat[r][j]
-                    mat[i][j] = clean_value(mat[i][j]) # Dọn dẹp rác lập tức
+                    mat[i][j] = clean_value(mat[i][j]) # Dọn dẹp rác
                     
         r += 1
         
