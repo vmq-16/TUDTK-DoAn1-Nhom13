@@ -1,8 +1,8 @@
 from gaussian import gaussian_elimination
 
-def calculate_determinant(A):
-    # Kiểm tra ma trận vuông
-    if len(A) != len(A[0]):
+def determinant(A):
+    # Kiểm tra ma trận rỗng và ma trận vuông
+    if not A or len(A) != len(A[0]):
         raise ValueError("Định thức chỉ xác định cho ma trận vuông.")
 
     # Sử dụng hàm khử Gauss để lấy ma trận tam giác trên U và số lần hoán vị dòng s
