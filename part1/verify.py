@@ -1,4 +1,5 @@
 import numpy as np
+import sympy as sp
 
 # Sử dụng chung ngưỡng sai số do nhóm thống nhất
 EPSILON = 1e-9
