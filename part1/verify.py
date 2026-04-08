@@ -144,7 +144,7 @@ def verify_rank_and_basis(A, my_rank, my_col, my_row, my_null):
                 is_all_passed = False
                 
         if is_all_passed:
-            print(f"✅ PASSED: Rank = {my_rank}. Các không gian Cột, Dòng và Nghiệm đều khớp hoàn toàn với SymPy/NumPy!")
+            print(f"PASSED: Rank = {my_rank}. Các không gian Cột, Dòng và Nghiệm đều khớp hoàn toàn với SymPy/NumPy!")
             
     except Exception as e:
         print(f"Lỗi trong quá trình kiểm chứng rank_and_basis: {e}")
