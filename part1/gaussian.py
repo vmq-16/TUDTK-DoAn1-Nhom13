@@ -11,7 +11,7 @@ warning_epsilon = 1e-6          # Ngưỡng cảnh báo mất ổn định số 
 #   REF của A|b hoặc A
 #   Nghiệm x hoặc None nếu b = None hoặc hệ vô nghiệm
 #   Số lần hoán vị dòng
-def gaussian_elimination(A, b = None):
+def gaussian_elimination(A, b = None, to_rref = False):
     # Kiểm tra tính hợp lệ của dữ liệu đầu vào
     if len(A) == 0:
         raise ValueError("Ma trận A không được rỗng")
@@ -67,14 +67,35 @@ def gaussian_elimination(A, b = None):
             M[cur_row], M[pivot[0]] = M[pivot[0]], M[cur_row]
             swap_count += 1
 
-        # Khử Gauss: biến đổi các phần tử dưới chốt về 0
-        for row in range(cur_row + 1, nrows):
-            factor = M[row][k] / M[cur_row][k]
-
+        if not to_rref:
+            # Khử Gauss để trả REF
+            for row in range(cur_row + 1, nrows):
+                factor = M[row][k] / M[cur_row][k]
+                for col in range(k, ncols):
+                    M[row][col] -= factor * M[cur_row][col]
+                    if abs(M[row][col]) < epsilon:
+                        M[row][col] = 0.0
+        
+        else:
+            # Khử Gauss-Jordan để trả RREF
+            pivot_val = M[cur_row][k]
+            
+            # Chia toàn bộ dòng chốt hiện tại chia cho phần tử chốt
             for col in range(k, ncols):
-                M[row][col] -=  factor * M[cur_row][col]
-                if abs(M[row][col]) < epsilon:
-                    M[row][col] = 0
+                M[cur_row][col] /= pivot_val
+                if abs(M[cur_row][col]) < epsilon:
+                    M[cur_row][col] = 0.0
+                    
+            # Triệt tiêu các phần tử cùng cột ở mọi dòng khác
+            for row in range(nrows):
+                if row != cur_row:
+                    factor = M[row][k]
+                    # Chỉ tính toán nếu phần tử cần khử thực sự khác 0
+                    if abs(factor) >= epsilon:
+                        for col in range(k, ncols):
+                            M[row][col] -= factor * M[cur_row][col]
+                            if abs(M[row][col]) < epsilon:
+                                M[row][col] = 0.0
         
         cur_row += 1
 
