@@ -1,17 +1,32 @@
 epsilon = 1e-9                  # Ngưỡng sai số làm tròn về 0
 warning_epsilon = 1e-6          # Ngưỡng cảnh báo mất ổn định số học
 
+# Làm sạch sai số chấm động
+def clean_value(x):
+    # Nếu số xấp xỉ 0
+    if abs(x) < epsilon:
+        return 0.0
+    
+    # Nếu số khác 0
+    rounded_x = round(x, 8)
+    if abs(x - rounded_x) < epsilon:
+        return rounded_x + 0.0  # Cộng 0.0 để loại bỏ triệt để -0.0
+    
+    return x + 0.0
+
 # Nhận ma trận A và vector b, thực hiện phép khử Gauss để đưa về dạng bậc thang (REF) trên ma trận mở rộng A|b
 #
 # Tham số đầu vào:
 #   A (array): Ma trận hệ số
 #   b (array): Vector hệ số tự do, có thể là None để tái sử dụng hàm cho các file determinant.py, inverse.py, rank_basis.py
+#   to_rref: Tùy chọn trả về REF hoặc RREF (mặc định REF)
+#   silent: Đưa ra cảnh báo mất ổn định số học (mặc định False)
 #
 # Kết quả trả về:
-#   REF của A|b hoặc A
+#   REF hoặc RREF của A|b hoặc A
 #   Nghiệm x hoặc None nếu b = None hoặc hệ vô nghiệm
 #   Số lần hoán vị dòng
-def gaussian_elimination(A, b = None, to_rref = False):
+def gaussian_elimination(A, b = None, to_rref = False, silent = False):
     # Kiểm tra tính hợp lệ của dữ liệu đầu vào
     if len(A) == 0:
         raise ValueError("Ma trận A không được rỗng")
@@ -53,14 +68,16 @@ def gaussian_elimination(A, b = None, to_rref = False):
         # Nếu |M_pk| = 0 (trong máy tính coi như < epsilon)
         if pivot_val < epsilon:
             if b is not None:
-                print(f"Không tồn tại pivot tại cột {k} (hệ không có nghiệm duy nhất)")
+                if not silent:
+                    print(f"Không tồn tại pivot tại cột {k} (hệ không có nghiệm duy nhất)")
             
             M[pivot[0]][pivot[1]] = 0
             continue
 
         # Nếu 0 < |M_pk| < warning_epsilon
         elif pivot_val < warning_epsilon:
-            print(f"[Cảnh báo]: pivot tại {(pivot[0], pivot[1])} gần bằng 0, hệ có thể bị mất ổn định số học")
+            if not silent:
+                print(f"[Cảnh báo]: pivot tại {(pivot[0], pivot[1])} gần bằng 0, hệ có thể bị mất ổn định số học")
 
         # Hoán vị dòng nếu phần tử lớn nhất không ở dòng hiện tại
         if pivot[0] != cur_row:
@@ -107,17 +124,14 @@ def gaussian_elimination(A, b = None, to_rref = False):
         # Kiểm tra trường hợp vô nghiệm: Dòng có dạng [0, 0, ..., 0 | c] với c != 0
         for row in range(nrows):
             if all(abs(M[row][col]) < epsilon for col in range(ncols - 1)) and abs(M[row][ncols-1]) >= epsilon:
-                print("Hệ vô nghiệm.")
                 return U, None, swap_count
             
         # Thế ngược để tìm vector nghiệm x
         x = back_substitution(U, c)
-        
-        # Chỉ làm tròn ma trận U ở bước xuất kết quả cuối cùng để hiển thị đẹp
-        U = [[round(val, 6) for val in row] for row in U]
+        U = [[clean_value(val) for val in row] for row in U]
     else:
         # Nếu b = None, toàn bộ ma trận M sau khi biến đổi chính là U
-        U = [[round(val, 6) for val in row] for row in M]
+        U = [[clean_value(val) for val in row] for row in M]
         x = None
     
     return U, x, swap_count
@@ -186,7 +200,7 @@ def back_substitution(U, c):
     
     # TH1: Hệ có nghiệm duy nhất
     if not free_vars:
-        return [round(sol[i].get('const', 0.0), 6) for i in range(ncols)]
+        return [clean_value(sol[i].get('const', 0.0)) for i in range(ncols)]
 
     # TH2: Hệ vô số nghiệm -> Ráp Dictionary thành chuỗi
     final_sol = []

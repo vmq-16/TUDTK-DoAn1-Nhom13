@@ -1,10 +1,4 @@
-from gaussian import gaussian_elimination, epsilon
-
-# Làm sạch sai số chấm động
-def clean_value(x):
-    if abs(x) < epsilon:
-        return 0.0
-    return x
+from gaussian import gaussian_elimination, epsilon, clean_value
 
 # Tìm hạng và cơ sở
 def rank_and_basis(A):
@@ -12,7 +6,7 @@ def rank_and_basis(A):
     n = len(A[0]) if m > 0 else 0
     
     # Lấy ma trận RREF
-    rref_mat, _, _ = gaussian_elimination(A, b=None, to_rref=True)
+    rref_mat, _, _ = gaussian_elimination(A, b = None, to_rref=True, silent = True)
     
     # Tìm các cột pivot để trả về hạng
     pivot_cols = []
@@ -26,7 +20,7 @@ def rank_and_basis(A):
     
     # Trích xuất C(A) và R(A)
     col_space = [[clean_value(A[i][c]) for i in range(m)] for c in pivot_cols]
-    row_space = [rref_mat[i] for i in range(rank)]
+    row_space = [[clean_value(val) for val in rref_mat[i]] for i in range(rank)]
     
     # Trích xuất N(A)
     null_space = []
@@ -37,6 +31,6 @@ def rank_and_basis(A):
         null_vec[f_col] = 1.0
         for i, p_col in enumerate(pivot_cols):
             null_vec[p_col] = clean_value(-rref_mat[i][f_col])
-        null_space.append([round(v, 6) for v in null_vec])
+        null_space.append([clean_value(v) for v in null_vec])
         
     return rank, col_space, row_space, null_space

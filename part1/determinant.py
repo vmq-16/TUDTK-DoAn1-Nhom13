@@ -1,4 +1,4 @@
-from gaussian import gaussian_elimination
+from gaussian import gaussian_elimination, clean_value
 
 def determinant(A):
     # Kiểm tra ma trận rỗng và ma trận vuông
@@ -7,7 +7,7 @@ def determinant(A):
 
     # Sử dụng hàm khử Gauss để lấy ma trận tam giác trên U và số lần hoán vị dòng s
     # Truyền b=None để hàm trả về kết quả cho ma trận hệ số đơn thuần
-    U, _, s = gaussian_elimination(A, b=None)
+    U, _, s = gaussian_elimination(A, b = None, silent = True)
     
     n = len(U)
     det = 1.0
@@ -19,4 +19,4 @@ def determinant(A):
     # Nhân với (-1)^s (s là số lần hoán vị dòng)
     det *= ((-1) ** s)
     
-    return round(det, 6)
+    return clean_value(det)

@@ -16,7 +16,7 @@ def inverse(A):
         
         # Tái sử dụng hàm Gauss để tính từng cột của ma trận nghịch đảo
         # A x A^-1 = I => A x (Cột i của A^-1) = (Cột i của I)
-        U, x, _ = gaussian_elimination(A, b=e_i)
+        U, x, _ = gaussian_elimination(A, b = e_i, silent = True)
         
         '''
         Kiểm tra tính khả nghịch dựa vào kết quả x.
