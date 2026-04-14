@@ -3,16 +3,23 @@ warning_epsilon = 1e-6          # Ngưỡng cảnh báo mất ổn định số 
 
 # Làm sạch sai số chấm động
 def clean_value(x):
-    # Nếu số xấp xỉ 0
+    # Nếu là số phức
+    if isinstance(x, complex) or type(x).__name__ in ('complex128', 'complex64'):
+        r = clean_value(x.real)
+        i = clean_value(x.imag)
+        if i == 0.0:
+            return r
+        return complex(r, i)
+        
+    # Nếu là số thực
     if abs(x) < epsilon:
         return 0.0
-    
-    # Nếu số khác 0
-    rounded_x = round(x, 8)
+        
+    rounded_x = round(float(x), 8)
     if abs(x - rounded_x) < epsilon:
-        return rounded_x + 0.0  # Cộng 0.0 để loại bỏ triệt để -0.0
-    
-    return x + 0.0
+        return rounded_x + 0.0
+        
+    return float(x) + 0.0
 
 # Nhận ma trận A và vector b, thực hiện phép khử Gauss để đưa về dạng bậc thang (REF) trên ma trận mở rộng A|b
 #
@@ -35,8 +42,8 @@ def gaussian_elimination(A, b = None, to_rref = False, silent = False):
         if len(row) != len(A[0]):
             raise ValueError("Tất cả các dòng của ma trận A phải có cùng độ dài")
 
-    # Chuẩn hóa tất cả phần tử về kiểu số thực
-    A = [[float(x) for x in row] for row in A] 
+    # Chuẩn hóa tất cả phần tử về kiểu số thực/số phức
+    A = [[x if isinstance(x, complex) else float(x) for x in row] for row in A]
 
     # Ghép ma trận mở rộng M = A|b
     if b is not None:
