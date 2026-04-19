@@ -1,16 +1,10 @@
-from part1.gaussian import back_substitution
-import random
-
 def check_strict_diagonal_dominance(matrix):
     nrows = len(matrix)
-
     for row in range(nrows):
-        sum = 0
+        diag = abs(matrix[row][row])
+        off = sum(abs(matrix[row][col]) for col in range(nrows) if col != row)
 
-        for col in range(row + 1, nrows):
-            sum += matrix[row][col]
-
-        if matrix[row][row] <= sum:
+        if diag < off:
             return False
 
     return True
@@ -43,7 +37,7 @@ def gauss_seidel(A, b, max_iter=1000, tol=1e-9):
             # update x[i]
             x[i] = (b[i] - sum1 - sum2) / A[i][i]
         
-        if any(abs(xi) > 1e15 for xi in x):
+        if any(abs(xi) > 1e50 for xi in x):
             raise ValueError(f"Divergent at iteration {iteration + 1}.")
 
         # check convergence
@@ -53,9 +47,8 @@ def gauss_seidel(A, b, max_iter=1000, tol=1e-9):
         error = error ** 0.5
         
         if error < tol:
-            print(f"Converged in {iteration+1} iterations")
+            # print(f"Converged in {iteration+1} iterations")
             return x
     
     print("Did not converge within max_iter")
     return x
-
