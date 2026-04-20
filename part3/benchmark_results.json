@@ -1,0 +1,452 @@
+[
+    {
+        "method": "Khử Gauss",
+        "avg_time": 0.011505699990084394,
+        "avg_error": 8.392102525843955e-10,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 50,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 0.03484896000591107,
+        "avg_error": 3.3669959723602438e-09,
+        "iterations": 50,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 50,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 0.002571680006803945,
+        "avg_error": 3.6485172763388165e-11,
+        "iterations": 9,
+        "converged": true,
+        "note": "Hội tụ thành công",
+        "n": 50,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 0.011278820008737967,
+        "avg_error": 1.467024630799635e-09,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 50,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 0.03529174000141211,
+        "avg_error": 4.2055479330893016e-08,
+        "iterations": 50,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 50,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 1.3999996008351446e-05,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 50,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 0.007386780000524595,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Lỗi: Ma trận suy biến hoặc mất ổn định số học",
+        "n": 50,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 0.02126764000277035,
+        "avg_error": 0.9263418944809493,
+        "iterations": 7,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 50,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 1.1980009730905294e-05,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 50,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 0.08092803999315948,
+        "avg_error": 2.248231059644799e-09,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 100,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 0.25728850000305103,
+        "avg_error": 5.13341060342409e-09,
+        "iterations": 100,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 100,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 0.008917580003617332,
+        "avg_error": 1.4674407768767255e-12,
+        "iterations": 9,
+        "converged": true,
+        "note": "Hội tụ thành công",
+        "n": 100,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 0.1079783400055021,
+        "avg_error": 8.179794376168664e-09,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 100,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 0.29475042000995016,
+        "avg_error": 1.802383524163116e-07,
+        "iterations": 100,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 100,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 1.2880004942417144e-05,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 100,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 0.05309999999590218,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Lỗi: Ma trận suy biến hoặc mất ổn định số học",
+        "n": 100,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 0.1539933000050951,
+        "avg_error": 0.982853306743104,
+        "iterations": 8,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 100,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 2.277999883517623e-05,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 100,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 0.713984660001006,
+        "avg_error": 4.88907933726272e-09,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 200,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 2.03404625999392,
+        "avg_error": 6.483446522880947e-09,
+        "iterations": 200,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 200,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 0.03570195999345742,
+        "avg_error": 3.890160746498072e-12,
+        "iterations": 8,
+        "converged": true,
+        "note": "Hội tụ thành công",
+        "n": 200,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 0.6250046199944336,
+        "avg_error": 7.604163228323354e-08,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 200,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 1.9650362400047015,
+        "avg_error": 1.549170991500866e-06,
+        "iterations": 200,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 200,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 2.8840004233643413e-05,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 200,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 0.37748214000603186,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Lỗi: Ma trận suy biến hoặc mất ổn định số học",
+        "n": 200,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 1.0295858400058933,
+        "avg_error": 0.9671542327613581,
+        "iterations": 9,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 200,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 2.7000007685273884e-05,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 200,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 10.889922033335703,
+        "avg_error": 1.0652553784673347e-08,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 500,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 34.23490056666196,
+        "avg_error": 1.015037471586829e-08,
+        "iterations": 500,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 500,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 0.19865750000462867,
+        "avg_error": 4.888589698517453e-12,
+        "iterations": 7,
+        "converged": true,
+        "note": "Hội tụ thành công",
+        "n": 500,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 10.889979366669044,
+        "avg_error": 1.2642372485599763e-07,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 500,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 34.04986420000205,
+        "avg_error": 6.664846788656737e-06,
+        "iterations": 500,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 500,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 8.10999966536959e-05,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 500,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 6.9006007333324915,
+        "avg_error": 4.572991149321211,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 500,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 19.16847156667306,
+        "avg_error": 0.9879254027549403,
+        "iterations": 10,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 500,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 0.00010730000212788582,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 500,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 98.19953370000196,
+        "avg_error": 2.054624879770427e-08,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 1000,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 309.00327503333875,
+        "avg_error": 1.3753905038221246e-08,
+        "iterations": 1000,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 1000,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 0.905969399997654,
+        "avg_error": 3.287805587493582e-11,
+        "iterations": 6,
+        "converged": true,
+        "note": "Hội tụ thành công",
+        "n": 1000,
+        "matrix_type": "diagonally_dominant"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 105.5516246999905,
+        "avg_error": 5.632383928566371e-09,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 1000,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 301.87687539999996,
+        "avg_error": 7.234082311831186e-06,
+        "iterations": 1000,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 1000,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 0.00013113333261571825,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 1000,
+        "matrix_type": "spd"
+    },
+    {
+        "method": "Khử Gauss",
+        "avg_time": 69.00604866666254,
+        "avg_error": 5.594605869946212,
+        "iterations": 0,
+        "converged": true,
+        "note": "Giải chính xác",
+        "n": 1000,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Phân rã SVD",
+        "avg_time": 173.1600871666548,
+        "avg_error": 0.9948038721217772,
+        "iterations": 11,
+        "converged": true,
+        "note": "Dùng giả nghịch đảo SVD",
+        "n": 1000,
+        "matrix_type": "hilbert"
+    },
+    {
+        "method": "Gauss-Seidel",
+        "avg_time": 0.00012606667587533593,
+        "avg_error": null,
+        "iterations": 0,
+        "converged": false,
+        "note": "Ma trận không chéo trội chặt (Không đảm bảo hội tụ)",
+        "n": 1000,
+        "matrix_type": "hilbert"
+    }
+]
