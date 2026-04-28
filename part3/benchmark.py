@@ -141,7 +141,7 @@ def benchmark_solver(solver_func, A, b, repeat=None):
 
     # Bước 1: chọn số lần chạy
     if repeat is None:
-        repeat = 3 if len(A) > 200 else 5
+        repeat = 5
 
     times = []
     errors = []

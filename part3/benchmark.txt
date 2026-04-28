@@ -1,45 +1,45 @@
-n=50, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=0.0115s, sai số=8.39e-10
-n=50, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=0.0348s, sai số=3.37e-09
-n=50, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.0026s, sai số=3.65e-11
-n=50, loại=spd, thuật toán=Khử Gauss, thời gian=0.0113s, sai số=1.47e-09
-n=50, loại=spd, thuật toán=Phân rã SVD, thời gian=0.0353s, sai số=4.21e-08
+n=50, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=0.0119s, sai số=8.39e-10
+n=50, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=0.0350s, sai số=3.37e-09
+n=50, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.0025s, sai số=3.65e-11
+n=50, loại=spd, thuật toán=Khử Gauss, thời gian=0.0117s, sai số=1.47e-09
+n=50, loại=spd, thuật toán=Phân rã SVD, thời gian=0.0357s, sai số=4.21e-08
 n=50, loại=spd, thuật toán=Gauss-Seidel, thời gian=0.0000s, sai số=inf
-n=50, loại=hilbert, thuật toán=Khử Gauss, thời gian=0.0074s, sai số=inf
-n=50, loại=hilbert, thuật toán=Phân rã SVD, thời gian=0.0213s, sai số=9.26e-01
+n=50, loại=hilbert, thuật toán=Khử Gauss, thời gian=0.0076s, sai số=inf
+n=50, loại=hilbert, thuật toán=Phân rã SVD, thời gian=0.0207s, sai số=9.26e-01
 n=50, loại=hilbert, thuật toán=Gauss-Seidel, thời gian=0.0000s, sai số=inf
-n=100, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=0.0809s, sai số=2.25e-09
-n=100, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=0.2573s, sai số=5.13e-09
-n=100, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.0089s, sai số=1.47e-12
-n=100, loại=spd, thuật toán=Khử Gauss, thời gian=0.1080s, sai số=8.18e-09
-n=100, loại=spd, thuật toán=Phân rã SVD, thời gian=0.2948s, sai số=1.80e-07
+n=100, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=0.0871s, sai số=2.25e-09
+n=100, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=0.2847s, sai số=5.13e-09
+n=100, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.0128s, sai số=1.47e-12
+n=100, loại=spd, thuật toán=Khử Gauss, thời gian=0.0836s, sai số=8.18e-09
+n=100, loại=spd, thuật toán=Phân rã SVD, thời gian=0.2378s, sai số=1.80e-07
 n=100, loại=spd, thuật toán=Gauss-Seidel, thời gian=0.0000s, sai số=inf
-n=100, loại=hilbert, thuật toán=Khử Gauss, thời gian=0.0531s, sai số=inf
-n=100, loại=hilbert, thuật toán=Phân rã SVD, thời gian=0.1540s, sai số=9.83e-01
+n=100, loại=hilbert, thuật toán=Khử Gauss, thời gian=0.0529s, sai số=inf
+n=100, loại=hilbert, thuật toán=Phân rã SVD, thời gian=0.1477s, sai số=9.83e-01
 n=100, loại=hilbert, thuật toán=Gauss-Seidel, thời gian=0.0000s, sai số=inf
-n=200, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=0.7140s, sai số=4.89e-09
-n=200, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=2.0340s, sai số=6.48e-09
-n=200, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.0357s, sai số=3.89e-12
-n=200, loại=spd, thuật toán=Khử Gauss, thời gian=0.6250s, sai số=7.60e-08
-n=200, loại=spd, thuật toán=Phân rã SVD, thời gian=1.9650s, sai số=1.55e-06
+n=200, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=0.6072s, sai số=4.89e-09
+n=200, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=2.1828s, sai số=6.48e-09
+n=200, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.0355s, sai số=3.89e-12
+n=200, loại=spd, thuật toán=Khử Gauss, thời gian=0.6413s, sai số=7.60e-08
+n=200, loại=spd, thuật toán=Phân rã SVD, thời gian=2.2586s, sai số=1.55e-06
 n=200, loại=spd, thuật toán=Gauss-Seidel, thời gian=0.0000s, sai số=inf
-n=200, loại=hilbert, thuật toán=Khử Gauss, thời gian=0.3775s, sai số=inf
-n=200, loại=hilbert, thuật toán=Phân rã SVD, thời gian=1.0296s, sai số=9.67e-01
+n=200, loại=hilbert, thuật toán=Khử Gauss, thời gian=0.3815s, sai số=inf
+n=200, loại=hilbert, thuật toán=Phân rã SVD, thời gian=1.0618s, sai số=9.67e-01
 n=200, loại=hilbert, thuật toán=Gauss-Seidel, thời gian=0.0000s, sai số=inf
-n=500, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=10.8899s, sai số=1.07e-08
-n=500, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=34.2349s, sai số=1.02e-08
-n=500, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.1987s, sai số=4.89e-12
-n=500, loại=spd, thuật toán=Khử Gauss, thời gian=10.8900s, sai số=1.26e-07
-n=500, loại=spd, thuật toán=Phân rã SVD, thời gian=34.0499s, sai số=6.66e-06
+n=500, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=11.0527s, sai số=1.07e-08
+n=500, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=32.6234s, sai số=1.02e-08
+n=500, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.1962s, sai số=4.89e-12
+n=500, loại=spd, thuật toán=Khử Gauss, thời gian=10.5161s, sai số=1.26e-07
+n=500, loại=spd, thuật toán=Phân rã SVD, thời gian=36.5947s, sai số=6.66e-06
 n=500, loại=spd, thuật toán=Gauss-Seidel, thời gian=0.0001s, sai số=inf
-n=500, loại=hilbert, thuật toán=Khử Gauss, thời gian=6.9006s, sai số=4.57e+00
-n=500, loại=hilbert, thuật toán=Phân rã SVD, thời gian=19.1685s, sai số=9.88e-01
+n=500, loại=hilbert, thuật toán=Khử Gauss, thời gian=10.1839s, sai số=4.57e+00
+n=500, loại=hilbert, thuật toán=Phân rã SVD, thời gian=25.3259s, sai số=9.88e-01
 n=500, loại=hilbert, thuật toán=Gauss-Seidel, thời gian=0.0001s, sai số=inf
-n=1000, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=98.1995s, sai số=2.05e-08
-n=1000, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=309.0033s, sai số=1.38e-08
-n=1000, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.9060s, sai số=3.29e-11
-n=1000, loại=spd, thuật toán=Khử Gauss, thời gian=105.5516s, sai số=5.63e-09
-n=1000, loại=spd, thuật toán=Phân rã SVD, thời gian=301.8769s, sai số=7.23e-06
+n=1000, loại=diagonally_dominant, thuật toán=Khử Gauss, thời gian=94.0504s, sai số=2.05e-08
+n=1000, loại=diagonally_dominant, thuật toán=Phân rã SVD, thời gian=289.4677s, sai số=1.38e-08
+n=1000, loại=diagonally_dominant, thuật toán=Gauss-Seidel, thời gian=0.7220s, sai số=3.29e-11
+n=1000, loại=spd, thuật toán=Khử Gauss, thời gian=86.1813s, sai số=5.63e-09
+n=1000, loại=spd, thuật toán=Phân rã SVD, thời gian=279.2330s, sai số=7.23e-06
 n=1000, loại=spd, thuật toán=Gauss-Seidel, thời gian=0.0001s, sai số=inf
-n=1000, loại=hilbert, thuật toán=Khử Gauss, thời gian=69.0060s, sai số=5.59e+00
-n=1000, loại=hilbert, thuật toán=Phân rã SVD, thời gian=173.1601s, sai số=9.95e-01
+n=1000, loại=hilbert, thuật toán=Khử Gauss, thời gian=67.8126s, sai số=5.59e+00
+n=1000, loại=hilbert, thuật toán=Phân rã SVD, thời gian=167.8920s, sai số=9.95e-01
 n=1000, loại=hilbert, thuật toán=Gauss-Seidel, thời gian=0.0001s, sai số=inf
