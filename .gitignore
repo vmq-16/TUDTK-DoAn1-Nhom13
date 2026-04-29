@@ -1,20 +1,19 @@
-# 1. Môi trường ảo và Biến môi trường
+# 1Môi trường ảo và biến môi trường
 venv/
 env/
 .env
 
-# 2. File rác Python và Jupyter Notebook
+# File rác Python và Jupyter Notebook
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .ipynb_checkpoints/
 
-# 3. Manim
+# Manim
 media/
-ManimCE_ext/
 
-# 4. Latex
+# Latex
 *.aux
 *.log
 *.out
