@@ -94,8 +94,8 @@ TUDTK-DoAn1-Nhom13/
     ├── analysis.ipynb         # Báo cáo thực nghiệm
     ├── solvers.py
     ├── benchmark.py
-    ├── benchmark.txt
-    └── benchmark_results.json           # Dữ liệu thống kê cấu trúc
+    ├── benchmark.txt           # Dữ liệu kết quả thô
+    └── benchmark_results.json  # Dữ liệu thống kê dành cho báo cáo
 ```
 
 ## 6. Các lỗi thường gặp
